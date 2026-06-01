@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocket Elevators &#8212; Operations Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<aside id="sidebar">
+  <div class="logo">
+    <h1>Rocket Elevators</h1>
+    <span>Operations Dashboard</span>
+  </div>
+  <nav>
+    <a href="#" class="active"><span class="nav-icon">&#127968;</span> Dashboard</a>
+    <a href="#"><span class="nav-icon">&#128647;</span> Elevators</a>
+    <a href="#"><span class="nav-icon">&#128269;</span> Inspections</a>
+    <a href="#"><span class="nav-icon">&#128202;</span> Reports</a>
+  </nav>
+</aside>
+
+<main id="main">
+  <div class="page-header">
+    <h2>Dashboard</h2>
+    <p>Real-time overview of elevator license status</p>
+  </div>
+
+  <div class="cards">
+    <div class="card primary">
+      <div class="card-icon">&#127970;</div>
+      <div class="card-body">
+        <div class="label">Total Elevators</div>
+        <div class="value" id="stat-total">&#8212;</div>
+      </div>
+    </div>
+    <div class="card success">
+      <div class="card-icon">&#9989;</div>
+      <div class="card-body">
+        <div class="label">Active Elevators</div>
+        <div class="value" id="stat-active">&#8212;</div>
+      </div>
+    </div>
+    <div class="card warning">
+      <div class="card-icon">&#9888;&#65039;</div>
+      <div class="card-body">
+        <div class="label">Expired Licenses</div>
+        <div class="value" id="stat-expired">&#8212;</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-section">
+    <div class="table-toolbar">
+      <h3>Elevator Licenses</h3>
+      <div class="search-wrap">
+        <span class="search-icon">&#128269;</span>
+        <input type="search" id="search-input" placeholder="Search by any field&#8230;" />
+      </div>
+      <span id="row-count"></span>
+    </div>
+
+    <div class="table-wrap">
+      <div id="loading-state">
+        <div class="spinner"></div>
+        <div>Loading license data&#8230;</div>
+      </div>
+      <div id="empty-state">No records match your search.</div>
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th data-col="0">Elevator ID <span class="sort-arrow"></span></th>
+            <th data-col="1">Location <span class="sort-arrow"></span></th>
+            <th data-col="2">License Number <span class="sort-arrow"></span></th>
+            <th data-col="3">Status <span class="sort-arrow"></span></th>
+            <th data-col="4">License Expiry <span class="sort-arrow"></span></th>
+            <th data-col="5">License Holder <span class="sort-arrow"></span></th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
