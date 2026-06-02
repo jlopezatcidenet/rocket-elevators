@@ -1,0 +1,16 @@
+{
+  "total_elevators": 45383,
+  "active_elevators": 42665,
+  "active_rate_pct": 94.01,
+  "expired_licenses": 45383,
+  "expiring_in_30_days": 0,
+  "expiring_in_60_days": 0,
+  "expiring_in_90_days": 0,
+  "cancelled_count": 1163,
+  "cancelled_rate_pct": 2.56,
+  "by_request_count": 337,
+  "by_request_rate_pct": 0.74,
+  "top_city_by_count": "TORONTO",
+  "top_license_holder": "TORONTO COMMUNITY HOUSING CORPORATION",
+  "analysis_date": "2026-06-01"
+}
